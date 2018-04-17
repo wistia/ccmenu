@@ -75,7 +75,8 @@
     NSURL *feedURLWithoutCredentials = [NSURL URLWithString:[[feedURL absoluteString] stringByReplacingCredentials:@""]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:feedURLWithoutCredentials cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0];
     BOOL isInCloudbeesDomain = ([feedURL host] != nil) && ([[feedURL host] rangeOfString:@"cloudbees.com"].location != NSNotFound);
-    if((useHudsonJenkinsAuthWorkaround || isInCloudbeesDomain) && ((credential != nil) || [self setUpCredential]))
+    BOOL isInWistiaDomain = ([feedURL host] != nil) && ([[feedURL host] rangeOfString:@"wistia.cloud"].location != NSNotFound);
+    if((useHudsonJenkinsAuthWorkaround || isInCloudbeesDomain || isInWistiaDomain) && ((credential != nil) || [self setUpCredential]))
         [self addBasicAuthToRequest:request];
     return request;
 }
