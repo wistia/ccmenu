@@ -704,7 +704,7 @@
 				ORGANIZATIONNAME = ThoughtWorks;
 				TargetAttributes = {
 					038ABE18134F11080053F0D1 = {
-						DevelopmentTeam = LL62P32G5C;
+						DevelopmentTeam = HXJRVHPX9B;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 1;
@@ -1144,8 +1144,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = CCMenu/CCMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = HXJRVHPX9B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${TARGET_BUILD_DIR}/Frameworks\"",
@@ -1166,9 +1168,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = CCMenu/CCMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HXJRVHPX9B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${BUILT_PRODUCTS_DIR}/Frameworks\"",
@@ -1179,6 +1183,7 @@
 				INFOPLIST_FILE = "CCMenu/CCMenu-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.sourceforge.cruisecontrol.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
